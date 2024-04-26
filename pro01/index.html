@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="normalize.css">
+<link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/static/woff2/SUIT.css" rel="stylesheet">
+<style>
+    * {margin:0; padding:0;}
+    body {width:100%; overflow-x: hidden; box-sizing: border-box; 
+        font-family: 'SUIT', sans-serif; background-color: #FCFCF5;}
+
+    ul {list-style: none;}
+    a { text-decoration: none; }
+    
+
+    #header {width:100%; background-color: #F7F7EB; height: 60px; justify-content: center; display: flex; 
+        min-width:1133px; border-bottom:1px solid #3b40192c; clear:both;}
+    
+    #gnb1 { margin:0 auto; height: 100%; }
+    #gnb1 .menu { height: 60px; min-width: 837.52px;}
+    #gnb1 .menu:hover .sub {/*display: block;*/ height:119px; padding-top:7px; padding-bottom:7px; transition: 0.3s; border-bottom:1px solid #eeeee3;} 
+    #gnb1 > .menu > li  { float:left; height: 100%; }
+    #gnb1 > .menu > li > a { padding:0 60px; color:#3b4019; font-weight: 600; 
+        line-height: 60px; font-size:19px;}
+    #gnb1 .menu > li:hover > a { font-weight:700; color:#848C45; }
+
+    #gnb1 .menu li .sub {  text-align: center; background-color: #FAFAF7; box-sizing: border-box;
+         height: 0; overflow:hidden; border-top:1px solid #3b40192c; /*display: none;*/}
+    #gnb1 .menu li .sub a { color:#3b4019; line-height: 35px;}
+    #gnb1 .menu li .sub li:hover { background-color: #eeeee3;}
+
+    /* #header::after { clear:both;  content:""; display:block; width:100%; } */
+    
+    
+    .btn-group {height:60px; align-items: center; align-items: center; display:flex;}
+    .btn { float:right; background-color: #EFF2D9; color:#3b4019; padding: 6px; width:80px; margin-right:10px;
+        border-radius: 12px; font-weight: 500; text-align: center; box-shadow: 2px 2px 4px -2px rgba(59,64,25,0.6);}
+ 
+
+    section {height: 100vh;}
+
+    #quick { width:65px; background-color: rgba(239, 247, 131, 0.167); border-radius: 40px; height: 65px; text-align:center; justify-content: center; display: flex; align-items: center;
+        position:fixed; bottom:20px; right:20px; box-shadow: 2px 2px 4px -2px rgba(59,64,25,0.6);}
+    #quick #scroll-top { scroll-snap-type:y mandatory; overflow: auto; }
+    #quick figure img { width:35px; height:auto; }
+</style>
+</head>
+<body>
+    <!-- 메뉴바 & 메인화면-->
+    <div id="header">
+        <nav id="gnb1">
+            <ul class="menu">
+                <li>
+                    <a href="">갈현동 소개</a>
+                    <ul class="sub item1">
+                        <li><a href="" class="dp1">지명유래</a></li>
+                        <li><a href="" class="dp1">오시는 길</a></li>
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="">갈현동 둘러보기</a>
+                    <ul class="sub item2">
+                        <li><a href="" class="dp2">교통편 안내</a></li>
+                        <li><a href="" class="dp2">주요시설 안내</a></li>
+                        <li><a href="" class="dp2">맛집 안내</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">커뮤니티</a>
+                    <ul class="sub item3">
+                        <li><a href="" class="dp3">공지사항</a></li>
+                        <li><a href="" class="dp3">자료실</a></li>
+                        <li><a href="" class="dp3">묻고답하기</a></li>
+                    </ul>
+                </li>
+                <li class="mypage">
+                    <a href="">마이페이지 </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="btn-group">
+            <a type="button" href="" class="btn btn-login">로그인</a>
+            <a type="button" href="" class="btn btn-join">회원가입</a>       
+        </div>
+    </div>
+    <div id="conents">
+        <section>
+            <h2>페이지1</h2>
+        </section>
+        <section>
+            <h2>페이지2</h2>
+        </section>
+        <section>
+            <h2>페이지3</h2>
+        </section>
+    </div>
+    
+    <div id="footer">
+
+    </div>
+    <div id="quick">
+        <a href="#header" id="scroll-top">
+        <figure>
+            <img src="quick.svg" alt="">
+        </figure></a>
+    </div>
+
+</body>
+</html>

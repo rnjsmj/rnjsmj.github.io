@@ -15,6 +15,7 @@
 <meta property="og:title" content="갈현동 소개" />
 <meta property="og:description" content="갈현동, 로데오거리, 맛집, 교통" />
 <meta property="og:image" content="img/opengraph.png" />
+<script src="lib/jquery-3.2.1.min.js"></script>
 <style>
     * {margin:0; padding:0; box-sizing: border-box;}
     body {width:100%;
@@ -59,7 +60,7 @@
 
 
     /* contents */
-    #contents { width:100%; min-height: 100vh; min-width:1200px;}
+    #contents { width:100%; min-height: 100vh; min-width:1200px; padding-bottom: 100px;}
     .blind { display: none;}
 
     .page { clear:both; width: 1200px;  margin:0 auto; background-color: #FCFCF5;}
@@ -90,7 +91,32 @@
     .page .placelist .item .paddr { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size:20px; color:#575757; font-weight: 500;}
     .page .placelist .item .ptel { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size:20px; color:#575757; font-weight: 500;}
     
+
+    .page .pagenations {width:308px; margin:0 auto; }
+    .page .pagenations .page-item { float:left; 
+         font-size:24px; font-weight: 700;}
+    .page .pagenations .page-item:not(:last-child) { margin-right:10px;}
+    .page .pagenations .page-item a {  display: block; width:43px; height: 43px; border-radius: 50px;
+        line-height: 43px; text-align: center;}
+    .page .pagenations .page-item.pre a, .page-item.next a{ border:#575757 1px solid; color:#575757;  }
+    .page .pagenations .page-item.now a { background-color: #535925; color:#FCFCF5; }
+    .page .pagenations .page-item.other a {background-color: #B5BF69; color:#FCFCF5;}
+
     
+    .page .adminbtn {float: right;}
+    .page .adminbtn .abtn { padding:10px 20px; color:#FCFCF5; border-radius: 22px; box-shadow: 2px 2px 4px -2px rgba(59,64,25,0.6);
+        font-size:22px; font-weight: 500;}
+    .page .adminbtn .abtn.manage { background-color: #B5BF69;  }
+    .page .adminbtn .abtn.insert {background-color: #535925; margin-left: 10px; }
+
+
+
+
+
+
+
+
+
     /* footer */
     #footer { background-color: #3b4019; width: 100%; height:205px; min-width: 1200px;}
 
@@ -103,7 +129,7 @@
     #footer .footer-content .mapinfo .info2 {clear:both; margin-bottom:20px;}
     #footer .footer-content .mapinfo .info1 {margin-bottom:10px;}
 
-    #footer .footer-content .copyright { font-weight: 400;}
+    #footer .footer-content .copyright { font-weight: 400; }
 </style>
 </head>
 <body>
@@ -213,6 +239,20 @@
                     <li><figure class=icon><img src="img/placemapmark.svg" alt="아이콘1"></figure><span class="pmark">주소</span><span class="paddr">서울특별시 은평구 증산로 476 (응암역 4번출구 185m)</span></li>
                     <li><figure class=icon><img src="img/placetelmark.svg" alt="아이콘2"></figure><span class="pmark">연락처</span><span class="ptel">정보 없음</span></li>
                 </div>
+            </div>
+            <div class="pagenations clrfix">
+                    <ul>
+                        <li class="page-item pre"><a href=""><</a></li>
+                        <li class="page-item now"><a href="">1</a></li>
+                        <li class="page-item other"><a href="">2</a></li>
+                        <li class="page-item other"><a href="">3</a></li>
+                        <li class="page-item other"><a href="">4</a></li>
+                        <li class="page-item next"><a href="">></a></li>
+                    </ul>
+            </div>
+            <div class="adminbtn">
+                <a type="button" href="#" class="abtn manage">관리</a>
+                <a type="button" href="#" class="abtn insert">주요 시설 등록</a>    
             </div>
         </section>
     </div>

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>메인 페이지</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>회원가입 페이지</title>
 <link rel="stylesheet" href="lib/normalize.css">
 <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/static/woff2/SUIT.css" rel="stylesheet">
 <meta name="subject" content="갈현동 소개 (Galhyeon-dong Intro)" />
@@ -19,78 +19,64 @@
     * {margin:0; padding:0; box-sizing: border-box;}
     body {width:100%;
         font-family: 'SUIT', sans-serif; background-color: #FCFCF5;}
-
+    
     ul {list-style: none;}
     a { text-decoration: none; }
+        
     
-
     /* header */
     #header {width:100%; background-color: #F7F7EB; height: 60px; justify-content: center; display: flex; 
         min-width:1200px; border-bottom:1px solid #3b40192c; clear:both; z-index: 999; position: relative;}
     .clrfix::after { content:""; display:block; width:100%; clear:both; }
-    
+        
     #logo {width:60px; height:60px; float:left; padding-right: 10px; }
     #logo img {width:100%; height:auto;}
     #gnb1 { margin:0 auto; height: 100%; }
     #gnb1 .menu { height: 60px; min-width: 910px;}
-    #gnb1 .menu:hover .sub {/*display: block;*/ height:119px; padding-top:7px; padding-bottom:7px; transition: 0.3s; border-bottom:1px solid #eeeee3; } 
+    #gnb1 .menu:hover .sub {/*display: block;*/ height:119px; padding-top:7px; padding-bottom:7px; transition: 0.3s; border-bottom:1px solid #eeeee3;} 
     #gnb1 > .menu > li  { float:left; height: 100%; }
     #gnb1 > .menu > li > a { padding:0 60px; color:#3b4019; font-weight: 600; 
-        line-height: 60px; font-size:19px;}
+       line-height: 60px; font-size:19px;}
     #gnb1 .menu > li:hover > a { font-weight:700; color:#848C45; }
-
+    
     #gnb1 .menu li .sub {  text-align: center; background-color: #FAFAF7; box-sizing: border-box;
          height: 0; overflow:hidden; /*display: none;*/}
     #gnb1 .menu li .sub a { color:#3b4019; line-height: 35px;}
     #gnb1 .menu li .sub li:hover { background-color: #eeeee3;}
-
+    
     .btn-group {height:60px; align-items: center; align-items: center; display:flex;}
     .btn { float:right; background-color: #EFF2D9; color:#3b4019; padding: 6px; width:80px; margin-right:10px;
         border-radius: 12px; font-weight: 500; text-align: center; box-shadow: 2px 2px 4px -2px rgba(59,64,25,0.6);}
-
+    
     #quick { width:65px; background-color: rgba(239, 247, 131, 0.167); border-radius: 40px; height: 65px; text-align:center; justify-content: center; display: flex; align-items: center;
         position:fixed; bottom:20px; right:20px; box-shadow: 2px 2px 4px -2px rgba(59,64,25,0.6);}
     #quick #scroll-top { scroll-snap-type:y mandatory; overflow: auto; }
     #quick figure img { width:35px; height:auto; }
 
-
-    /* contents */
+    /*contents*/
     #contents { width:100%; height: 100vh; min-width:1200px;}
     .blind { display: none;}
 
-    .page { clear:both; width: 1200px;  margin:0 auto; background-color: #FCFCF5;}
+    .page { clear:both; width: 1200px;  margin:0 auto; background-color: #FCFCF5; }
     .page::after { content:""; display:block; width:100%; clear:both; }
-    .page_title { text-align: center; padding-top: 2em; 
-        padding-bottom: 0.5em; }
-    .page_wrap { clear:both; width: 1200px; margin: 0 auto; }
-      
+    .page .pagetitle { text-align: center; font-size: 48px; padding-top: 2em; 
+        padding-bottom: 1em; color:#3b4019; font-weight: 800;}
+    .page .join-wrap { width:1200px; margin:0 auto; justify-content: center;}
+    .page .join-wrap .input { width:525px; height:72px; font-size: 24px; color:black; margin:0 auto; display: block;
+        background-color: #fff; border: #3b4019 2px solid; border-radius: 10px; padding:10px;}
+    .page .join-wrap .joinbtn { width:525px; height:72px; font-size: 28px; color:#FCFCF5; margin:0 auto;
+        background-color: #535925; border-radius: 10px; padding:10px; text-align: center; 
+        display: block; font-weight: 600;box-shadow: 5px 5px 4px -2px rgba(59,64,25,0.6); border:none;}
+        
+    .idck { font-size:22px; color:#FCFCF5; background-color: #848C45; padding:5px 15px; border-radius: 7px; border: none;}
     
-    #vs {  width: 100%; aspect-ratio:120/31; position: relative; z-index: -999; clear: both; display: block;
-        box-sizing: border-box; min-width: 1200px;}
-    #vs img { width: 100%;  position:absolute; z-index: -999;  height: auto;}
-    #vs::after{ content:""; clear: both; display: table; width:100%; }  
+    .page .join-wrap .join-table { border-spacing: 15px; min-width: 1017px; margin:0 auto; margin-right: 45px;}
+    .page .join-wrap .join-table th {text-align: right; font-size:28px; font-weight: 600; color: #3b4019; padding-right:20px;}
+    
+    .page .join-wrap .join-table .tr-pwck td:last-child { color:#848C45; font-size:22px;}
 
-    .move-btn { clear: both; margin:20px auto; } 
-    .mbtn { width:31%; background-color: #D3D9A9; border-radius: 30px; height:142px;
-        box-sizing: border-box; margin:10px;  padding:26px 19px; display: inline-block;
-        box-shadow: 5px 5px 10px -2px rgba(59,64,25,0.6);}
-    .move-btn .mbtn.btn-place { width:32%; }
-    .circle {float:left; width:90px; height: 90px; border-radius: 45px; background-color: #FCFCF5;
-        justify-content: center; display: grid; align-items: center; margin-right: 20px; }
-    .move-btn .btn-origin .circle {padding-left: 10px; }
-    .move-btn .mbtn .comment-box { padding-top:8px;}
-    .move-btn .mbtn .btn-title {  font-size: 32px; color:#3b4019; font-weight: 800; margin-bottom: 10px;}
-    .move-btn .mbtn .btn-comment { font-size: 24px; color:#494949; font-weight: 700; margin:auto 0;}
-    
-    .latestlist {clear:both; margin-top:20px; width:100%; }
-    .latest {  height:95px; background-color: #fff; margin-bottom: 20px;
-        border-radius: 13px; box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.25) ; align-items: center; display: flex;
-        padding:30px;}
-    .ltap { float:left; color:#505050; font-size: 26px; width:150px;}
-    .ltitle { color:#494949; font-size: 28px; font-weight: 600;}
-    .ldate { margin-left: auto; color:#505050; font-size:26px; padding-left: 50px; display: block;}
-    
-    /* footer */
+
+    /*footer*/
     #footer { background-color: #3b4019; width: 100%; height:205px; min-width: 1200px;}
 
     #footer .footer-content { width: 1200px; margin:0 auto; padding:30px; color:#FCFCF5;}
@@ -107,11 +93,12 @@
 </style>
 </head>
 <body>
-    <!-- 메뉴바 & 메인화면-->
+    <!-- 메뉴바 -->
     <div id="header">
         <nav id="gnb1">
             <div id="logo">
-                <img src="img/logo_icon_remove.png" alt="로고" width="60px;" height="60px";>
+                <a href="index.html">
+                <img src="img/logo_icon_remove.png" alt="로고" width="60px;" height="60px";></a>
             </div> 
             <ul class="menu">
                 <li>
@@ -149,61 +136,48 @@
         </div>
     </div>
     <div id="contents">
-        <div id="vs">
-            <img src="img/visualbanner.png" alt="배너">
-        </div> 
         <section class="page" id="page1">
-            <h2 class="blind">메인화면 컨텐츠</h2>
-            <div class="move-btn clrfix">
-                <a href="">
-                <div class="mbtn btn-origin">
-                    <div class="circle">
-                        <img src="img/originmark.png" alt="아이콘1">
-                    </div>
-                    <div class="comment-box">
-                        <p class="btn-title">갈현의 유래</p>
-                        <p class="btn-comment">갈현동의 시작에 대해</p>
-                    </div>
-                </div></a>
-                <a href="">
-                <div class="mbtn btn-place">
-                    <div class="circle">
-                        <img src="img/mapmark.png" alt="아이콘2">
-                    </div>
-                    <div class="comment-box">
-                        <p class="btn-title">갈현동 주요시설</p>
-                        <p class="btn-comment">갈현동에 놀러왔다면</p>
-                    </div>
-                </div>
-                </a>
-                <a href="">
-                <div class="mbtn btn-qna">
-                    <div class="circle">
-                        <img src="img/qnamark.png" alt="아이콘3">
-                    </div>
-                    <div class="comment-box">
-                        <p class="btn-title">묻고 답하기</p>
-                        <p class="btn-comment">서로 물어보고 답하고</p>
-                    </div>
-                </div>
-                </a>
-            </div>
-            <div class="latestlist">
-            <div class="latest latestNotice">
-                <div class=""><p class="lcon ltap">공지사항</p></div>
-                <a href=""><p class="lcon ltitle">최신 공지사항 제목</p></a> 
-                <p class="lcon ldate">2024-04-28</p>
-            </div>
-            <div class="latest latestData">
-                <p class="lcon ltap">자료실</p>
-                <a href=""><p class="lcon ltitle">최신 자료 제목</p></a> 
-                <p class="lcon ldate">2024-04-28</p>
-            </div>
+            <h2 class="blind">회원가입화면</h2>
+            <div class="pagetitle"><p>회원가입</p></div>
+            <div class="join-wrap">
+                <table class="join-table">
+                    <tbody>
+                        <tr class="tr-id">
+                            <th>아이디</th>
+                            <td><input class="input input-id" type="text" placeholder="아이디" ></td>
+                            <td><button class="idck">아이디 중복확인</button></td>
+                        </tr>
+                        <tr class="tr-pw">
+                            <th>비밀번호</th>
+                            <td><input class="input input-pw" type="text" placeholder="비밀번호" ></td>
+                            <td></td>
+                        </tr>
+                        <tr class="tr-pwck">
+                            <th>비밀번호확인</th>
+                            <td> <input class="input input-pwck" type="text" placeholder="비밀번호확인" ></td>
+                            <td>비밀번호가 일치하지 않습니다.</td>
+                        </tr>
+                        <tr class="tr-tel">
+                            <th>전화번호</th>
+                            <td><input class="input input-tel" type="text" placeholder="전화번호" ></td>
+                            <td></td>
+                        </tr>
+                        <tr class="tr-email">
+                            <th>이메일</th>
+                            <td><input class="input input-email" type="text" placeholder="이메일" ></td>
+                            <td></td>
+                        </tr>
+                        <tr class="tr-btn">
+                            <th></th>
+                            <td><input class="joinbtn" type="button" value="회원가입"></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                
             </div>
         </section>
-        
     </div>
-    
     <div id="footer">
         <div class="footer-content">
             <div class="policy">
@@ -227,13 +201,5 @@
             </div>
         </div>
     </div>
-
-    <div id="quick">
-        <a href="#header" id="scroll-top">
-        <figure>
-            <img src="img/quick.svg" alt="">
-        </figure></a>
-    </div>
-
 </body>
 </html>

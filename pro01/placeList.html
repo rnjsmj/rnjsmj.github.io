@@ -28,13 +28,14 @@
 
     /* header */
     #header {width:100%; background-color: #F7F7EB; height: 60px; justify-content: center; display: flex; 
-        min-width:1200px; border-bottom:1px solid #3b40192c; clear:both; z-index: 999; position: relative;}
+        min-width:1200px; border-bottom:1px solid #3b40192c; clear:both; z-index: 90; position: relative;}
     .clrfix::after { content:""; display:block; width:100%; clear:both; }
     
-    #logo {width:60px; height:60px; float:left; padding-right: 10px; }
-    #logo img {width:100%; height:auto;}
-    #gnb1 { margin:0 auto; height: 100%; }
-    #gnb1 .menu { height: 60px; min-width: 920px;}
+    #logo {clear:both; width:1200px; height:60px; float:left; position: relative; z-index:91; 
+        display: flex; margin:0 auto; padding-left: 20px;}
+    #logo img {width:60px; height:auto; }
+    #gnb1 { margin:0 auto; height: 100%; position:absolute; z-index: 92;}
+    #gnb1 .menu { height: 60px; min-width: 854px; margin:0 auto;}
     #gnb1 .menu:hover .sub {/*display: block;*/ height:119px; padding-top:7px; padding-bottom:7px; transition: 0.3s; border-bottom:1px solid #eeeee3; } 
     #gnb1 > .menu > li  { float:left; height: 100%; }
     #gnb1 > .menu > li > a { padding:0 60px; color:#3b4019; font-weight: 600; 
@@ -46,7 +47,8 @@
     #gnb1 .menu li .sub a { color:#3b4019; line-height: 35px;}
     #gnb1 .menu li .sub li:hover { background-color: #eeeee3;}
 
-    .btn-group {height:60px;  align-items: center; display:flex; width:210px;}
+    .btn-group { clear:both; float:right; height:60px;  align-items: center; display:flex; width:210px;
+        position:absolute; right:10px;}
     .btn { float:right; background-color: #D3D9A9; color:#3b4019; padding: 6px; width:100px; margin-right:10px;
         border-radius: 15px; font-weight: 500; text-align: center; box-shadow: 2px 2px 4px -2px rgba(59,64,25,0.6);}
     .sessioninfo { float:right; color:#3b4019; width:100px; margin-right:10px; font-weight: 500; }
@@ -81,6 +83,7 @@
     .page .placelist .item .pfg {width:100%; height: 250px; overflow:hidden; margin:0 auto;}
     .page .placelist .item .pfg img  {width:100%; height:100%; object-fit: cover; transition: 0.5s; }
     .page .placelist .item:hover .pfg img{ transform:scale(1.1);}
+    .page .placelist .item:hover .pname { font-weight: 800;}
     .item .icon {width:40px; height: 40px; background-color: #3b4019; border-radius: 40px; min-width: 40px;
         text-align: center;  }
     .item li .icon {float: left; line-height: 45px; }
@@ -126,11 +129,12 @@
 <body>
      <!-- 메뉴바 -->
      <div id="header">
-        <nav id="gnb1">
             <div id="logo">
                 <a href="index.html">
                 <img src="img/logo_icon_remove.png" alt="로고" width="60px;" height="60px";></a>
             </div> 
+        <nav id="gnb1">
+            
             <ul class="menu">
                 <li>
                     <a href="">갈현동 소개</a>

@@ -74,8 +74,8 @@
         
     .idck { font-size:22px; color:#FCFCF5; background-color: #848C45; padding:5px 15px; 
         border-radius: 7px; border: none; cursor: pointer;}
-    
-    .page .join-form .join-table { border-spacing: 15px; min-width: 1017px; margin:0 auto; margin-right: 25px;}
+    .pwConfirm {width:272px;}
+    .page .join-form .join-table { border-spacing: 15px; min-width: 1017px; margin:0 auto; margin-left: 160px;}
     .page .join-form .join-table th {text-align: right; font-size:24px; font-weight: 600; color: #3b4019; padding-right:20px;}
     
     .page .join-form .join-table .tr-pwck td:last-child { color:#848C45; font-size:22px;}
@@ -154,13 +154,13 @@
                         </tr>
                         <tr class="tr-pw">
                             <th>비밀번호</th>
-                            <td><input class="input input-pw" type="password" placeholder="비밀번호" ></td>
+                            <td><input class="input input-pw" type="password" placeholder="비밀번호" oninput="pwCheck()"></td>
                             <td></td>
                         </tr>
                         <tr class="tr-pwck">
                             <th>비밀번호확인</th>
-                            <td> <input class="input input-pwck" type="password" placeholder="비밀번호확인" ></td>
-                            <td>비밀번호가 일치하지 않습니다.</td>
+                            <td> <input class="input input-pwck" type="password" placeholder="비밀번호확인" oninput="pwCheck()"></td>
+                            <td class="pwConfirm">비밀번호가 일치하지 않습니다.</td>
                         </tr>
                         <tr class="tr-tel">
                             <th>전화번호</th>
@@ -212,6 +212,16 @@
             alert('사용 가능한 아이디입니다.');
             console.log('버튼 클릭');
         });
+
+        function pwCheck() {
+            if($('.input-pw').val() == $('.input-pwck').val()) {
+                $('.pwConfirm').text('비밀번호가 일치합니다.');
+                console.log('일치');
+            } else {
+                $('.pwConfirm').text('비밀번호가 일치하지 않습니다.')
+                console.log('불일치');
+            }
+        };
     </script>
 </body>
 </html>

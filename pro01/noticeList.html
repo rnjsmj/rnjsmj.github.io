@@ -76,18 +76,32 @@
     .page .bread-crumb a, p { padding-right:13px;}
 
     .page .noticelist { width:1140px; margin:30px auto; min-width: 1140px; }
-    .page .noticelist .noticetable {width:100%; margin:0 auto; font-size: 24px; text-align: center; 
+    .page .noticelist .noticetable {width:100%; margin:0 auto; font-size: 22px; text-align: center; 
         border-collapse: collapse;}
     .page .noticelist .noticetable th {padding:15px; color: #3b4019; border-top: #3b4019 9px solid; border-bottom: #3b4019 2px solid;}
-    .page .noticelist .noticetable td {padding:15px; color:#494949; border-bottom: #848C45 2px solid;}
+    .page .noticelist .noticetable .th-no, .th-vst {width:10%;}
+    .page .noticelist .noticetable .th-date {width:25%;}
+    .page .noticelist .noticetable td {padding:17px; color:#494949; border-bottom: #848C45 2px solid;}
     .page .noticelist .noticetable .td-title {text-align: left; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
         padding-left:30px;}
     .page .noticelist .noticetable .td-title a { color:#494949; font-weight:500;}
     .page .noticelist .noticetable .td-title a:hover {font-weight: 600; text-decoration: underline;}
 
+    .page .pagenations {width:308px; margin:0 auto; }
+    .page .pagenations .page-item { float:left; 
+         font-size:24px; font-weight: 700;}
+    .page .pagenations .page-item:not(:last-child) { margin-right:10px;}
+    .page .pagenations .page-item a {  display: block; width:43px; height: 43px; border-radius: 50px;
+        line-height: 43px; text-align: center;}
+    .page .pagenations .page-item.pre a, .page-item.next a{ border:#575757 1px solid; color:#575757;  }
+    .page .pagenations .page-item.now a { background-color: #535925; color:#FCFCF5; }
+    .page .pagenations .page-item.other a {background-color: #B5BF69; color:#FCFCF5;}
 
-
-
+    .page .adminbtn {float: right;}
+    .page .adminbtn .abtn { padding:10px 20px; color:#FCFCF5; border-radius: 22px; box-shadow: 2px 2px 4px -2px rgba(59,64,25,0.6);
+        font-size:22px; font-weight: 500;}
+    .page .adminbtn .abtn.manage { background-color: #B5BF69;  }
+    .page .adminbtn .abtn.insert {background-color: #535925; margin-left: 10px; }
 
     /* footer */
     #footer { background-color: #3b4019; width: 100%; height:205px; min-width: 1200px;}
@@ -207,6 +221,20 @@
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            <div class="pagenations clrfix">
+                <ul>
+                    <li class="page-item pre"><a href=""><</a></li>
+                    <li class="page-item now"><a href="">1</a></li>
+                    <li class="page-item other"><a href="">2</a></li>
+                    <li class="page-item other"><a href="">3</a></li>
+                    <li class="page-item other"><a href="">4</a></li>
+                    <li class="page-item next"><a href="">></a></li>
+                </ul>
+            </div>
+            <div class="adminbtn">
+                <a type="button" href="#" class="abtn manage">관리</a>
+                <a type="button" href="#" class="abtn insert">공지사항 등록</a>    
             </div>
         </section>
     </div>

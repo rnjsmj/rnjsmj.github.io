@@ -62,19 +62,20 @@
     .page::after { content:""; display:block; width:100%; clear:both; }
     .page .pagetitle { text-align: center; font-size: 48px; padding-top: 2em; 
         padding-bottom: 1em; color:#3b4019; font-weight: 800;}
-    .page .join-wrap { width:1200px; margin:0 auto; justify-content: center;}
-    .page .join-wrap .input { width:525px; height:72px; font-size: 24px; color:black; margin:0 auto; display: block;
+    .page .join-form { width:1200px; margin:0 auto; justify-content: center;}
+    .page .join-form .input { width:525px; height:72px; font-size: 24px; color:black; margin:0 auto; display: block;
         background-color: #fff; border: #3b4019 2px solid; border-radius: 10px; padding:10px;}
-    .page .join-wrap .joinbtn { width:525px; height:72px; font-size: 28px; color:#FCFCF5; margin:0 auto;
-        background-color: #535925; border-radius: 10px; padding:10px; text-align: center; 
+    .page .join-form .joinbtn { width:525px; height:72px; font-size: 28px; color:#FCFCF5; margin:0 auto;
+        background-color: #535925; border-radius: 10px; padding:10px; text-align: center; line-height: 52px;
         display: block; font-weight: 600;box-shadow: 5px 5px 4px -2px rgba(59,64,25,0.6); border:none;}
         
-    .idck { font-size:22px; color:#FCFCF5; background-color: #848C45; padding:5px 15px; border-radius: 7px; border: none;}
+    .idck { font-size:22px; color:#FCFCF5; background-color: #848C45; padding:5px 15px; 
+        border-radius: 7px; border: none; cursor: pointer;}
     
-    .page .join-wrap .join-table { border-spacing: 15px; min-width: 1017px; margin:0 auto; margin-right: 45px;}
-    .page .join-wrap .join-table th {text-align: right; font-size:24px; font-weight: 600; color: #3b4019; padding-right:20px;}
+    .page .join-form .join-table { border-spacing: 15px; min-width: 1017px; margin:0 auto; margin-right: 45px;}
+    .page .join-form .join-table th {text-align: right; font-size:24px; font-weight: 600; color: #3b4019; padding-right:20px;}
     
-    .page .join-wrap .join-table .tr-pwck td:last-child { color:#848C45; font-size:22px;}
+    .page .join-form .join-table .tr-pwck td:last-child { color:#848C45; font-size:22px;}
 
 
     /*footer*/
@@ -140,13 +141,13 @@
         <section class="page" id="page1">
             <h2 class="blind">회원가입화면</h2>
             <div class="pagetitle"><p>회원가입</p></div>
-            <div class="join-wrap">
+            <div class="join-form">
                 <table class="join-table">
                     <tbody>
                         <tr class="tr-id">
                             <th>아이디</th>
                             <td><input class="input input-id" type="text" placeholder="아이디" ></td>
-                            <td><button class="idck">아이디 중복확인</button></td>
+                            <td><button class="idck"  type="button">아이디 중복확인</button></td>
                         </tr>
                         <tr class="tr-pw">
                             <th>비밀번호</th>
@@ -170,7 +171,7 @@
                         </tr>
                         <tr class="tr-btn">
                             <th></th>
-                            <td><input class="joinbtn" type="button" value="회원가입"></td>
+                            <td><a class="joinbtn" type="button" href="">회원가입</a></td>
                             <td></td>
                         </tr>
                     </tbody>
@@ -202,5 +203,12 @@
             </div>
         </div>
     </div>
+
+    <script>
+        $('.idck').on("click", function() {
+            alert('사용 가능한 아이디입니다.');
+            console.log('버튼 클릭');
+        });
+    </script>
 </body>
 </html>
